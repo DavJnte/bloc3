@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 mt-5"> <!-- Ajout de la classe mt-5 pour déplacer l'élément vers le bas -->
             <div class="card">
                 <div class="card-header">{{ __('Connexion') }}</div>
 
@@ -11,6 +12,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        <!-- ... formulaire ... -->
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
@@ -70,4 +72,5 @@
         </div>
     </div>
 </div>
+
 @endsection

@@ -19,9 +19,7 @@
                 </div>
                 <div class="col-lg-6 col-md-4">
                     <div class="inner">
-                        <div class="bradcrumb-thumb">
-                            <img src="{{asset('assets-admin/images/product-45.png')}}" alt="Image">
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -58,34 +56,13 @@
                                     @endif
                                     @if($cat == "search")
                                     <h6>
-                                        {{$count ?? 0 }} Recherche trouvée pour: {{$key }}
+                                        {{$count ?? 0 }} Résultat trouvé : {{$key }}
                                     </h6>
                                     @endif
                                 </ul>
                             </div>
                         </div>
 
-
-
-
-                        {{-- a venir
-                            <div class="toggle-list product-price-range active">
-                            <h6 class="title">PRICE</h6>
-                            <div class="shop-submenu">
-                                <ul>
-                                    <li class="chosen"><a href="#">30</a></li>
-                                    <li><a href="#">5000</a></li>
-                                </ul>
-                                <form action="#" class="mt--25">
-                                    <div id="slider-range"></div>
-                                    <div class="flex-center mt--20">
-                                        <span class="input-range">Price: </span>
-                                        <input type="text" id="amount" class="amount-range" readonly>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <button class="axil-btn btn-bg-primary">All Reset</button>--}}
                     </div>
                     <!-- End .axil-shop-sidebar -->
                 </div>
@@ -93,27 +70,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="axil-shop-top mb--40">
-                                <div class="category-select align-items-center justify-content-lg-end justify-content-between">
-                                    <!-- Start Single Select  -->
-                                    <span class="filter-results">Recherche par</span>
-                                    <select  class="single-select">
-                                        @foreach($category as $categories)
-                                        <option value="{{$categories->category}}">{{$categories->category}}</option>
-                                        @endforeach
 
-
-                                    </select>
-                                    <script>
-                                        // go to url catalogue/category on select change
-                                        document.querySelector('.single-select').addEventListener('change', function() {
-                                            window.location.href = '/catalogue/'+this.value;
-                                        });
-                                    </script>
-                                    <!-- End Single Select  -->
-                                </div>
-                                <div class="d-lg-none d-none">
-                                    <button class="product-filter-mobile filter-toggle"><i class="fas fa-filter"></i> FILTER</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,22 +119,14 @@
                                             @php
                                                 $description = html_entity_decode($item->description);
                                                 $description = strip_tags($description);
-
                                                 echo $description;
-
                                             @endphp
                                             </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         @endforeach
-
-
-                    </div>
-                    <div class="text-center pt--20 d-none">
-                        <a href="#" class="axil-btn btn-bg-lighter btn-load-more">Load more</a>
                     </div>
                 </div>
             </div>
@@ -188,7 +137,6 @@
 
 
 </main>
-
 
 <div class="service-area">
     <div class="container">
@@ -212,7 +160,6 @@
                     </div>
                     <div class="content">
                         <h6 class="title">Retour et remboursement</h6>
-                        <p>Oui, possible</p>
                     </div>
                 </div>
             </div>
@@ -223,11 +170,11 @@
                     </div>
                     <div class="content">
                         <h6 class="title">Support</h6>
-                        <p>24/7 support par mail.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection
