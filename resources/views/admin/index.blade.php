@@ -209,7 +209,6 @@
                                                   <select name="promo" class="custom-select" id="fls1">
                                                     <option value=""> Choisir... </option>
                                                     @foreach ($promo as $item)
-
                                                     <option value="{{$item->reduction}}"> {{$item->reduction}}% </option>
                                                     @endforeach
                                                   </select> <label for="fls1">Promo</label>

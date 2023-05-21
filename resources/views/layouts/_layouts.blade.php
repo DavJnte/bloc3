@@ -397,7 +397,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Déconnexion!') }}
                 </div>
             </div>
         </div>

@@ -21,8 +21,13 @@ class PromoController extends Controller
         $promo->date_debut = $request->input('date_debut');
         $promo->date_fin = $request->input('date_fin');
         $promo->code = rand(1000, 9999);
-        $promo->save();
-        return redirect()->back()->with('success', 'Promo ajoutée avec succès');
+        if( $promo->date_fin < $promo->date_debut ){
+            return redirect()->back()->with('warning', 'Les dates de promotion ne sont pas correct');
+        }else{
+            $promo->save();
+            return redirect()->back()->with('success', 'Promo ajoutée avec succès');
+        }
+
     }
     // deletepromo
     public function deletepromo($id)
@@ -35,19 +40,24 @@ class PromoController extends Controller
     // applypromo
     public function applypromo(Request $request)
     {
+        if(empty($promo)){
+            return redirect()->back()->with('warning', 'Veuillez sélectionner une promotion');
+        }else{
         $reduction = $request->input('promo');
         $promo_ = \App\Models\Promo::where('reduction', $request->input('promo'))->first();
         $date_de_debut = $promo_->date_debut;
         $date_de_fin = $promo_->date_fin;
 
-
         $promo = Product::where('code', $request->input('code_product'))->first();
         $promo->prix_promo = $promo->prix - ($promo->prix * $reduction / 100);
         $promo->date_debut = $date_de_debut;
         $promo->date_fin = $date_de_fin;
-        $promo->update();
 
-        return redirect()->back()->with('success', 'Promo appliquée avec succès');
-        
+
+    $promo->update();
+
+    return redirect()->back()->with('success', 'Promo appliquée avec succès');
+}
+
     }
 }

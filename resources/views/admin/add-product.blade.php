@@ -53,7 +53,7 @@
             </div>
           </div>
           <div class="form-group">
-            <textarea name="description" id="mytextarea">Ecrire description...</textarea>
+            <textarea name="description" id="mytextarea">Ecrire une description...</textarea>
           </div>
 
 
