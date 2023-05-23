@@ -10,7 +10,7 @@
 # Connexion
 
 ## Lien de la version du Site en ligne : [Cliquez-ici](https://client.esperanto-centroj.com)
-Pour se connecter à mon Application veuillez saisir les identifiants de connexion ci-dessous :
+Pour se connecter à mon Application veuillez ajouter /login dans l'url et saisir les identifiants de connexion ci-dessous :
 ### Email : 
 - admin@gmail.com
 ### Mot de passe : 
@@ -18,8 +18,8 @@ Pour se connecter à mon Application veuillez saisir les identifiants de connexi
 
 # Migration Base de Données Postgresql
 
-Afin de faire fonctionner la base de donnée vous pouvez copier - coller le script dans le dossier [database] et [migrations] dans Postgresql.  
+Afin de faire fonctionner la base de donnée vous pouvez copier - coller le script nommé data.sql dans le dossier [database] et [migrations] dans Postgresql.  
 Ce fichier contient toutes les tables avec les données qui vont avec. Si jamais vous n'arrivez pas à vous connecter vous pouvez utiliser mysql. 
-( Je vous ai laissé une base de données pour mysql au cas ou)
+( Je vous ai laissé une base de données pour mysql au cas ou )
 
 Le fichier .env.example reste à votre disposition pour les deux version SGBD. 
