@@ -8,8 +8,6 @@
 </p>
 
 # Connexion
-
-## Lien de la version du Site en ligne : [Cliquez-ici](https://client.esperanto-centroj.com)
 Pour se connecter à mon Application veuillez ajouter /login dans l'url et saisir les identifiants de connexion ci-dessous :
 ### Email : 
 - admin@gmail.com
